@@ -28,6 +28,7 @@ public class BaseClass {
 		pro.load(new FileInputStream(new File("config.properties")));
 		driver = DriverFactory.getDriver();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 		driver.get(pro.getProperty("url"));
 
 	}
